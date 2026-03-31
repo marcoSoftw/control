@@ -644,17 +644,6 @@
                 return;
             }
             
-            if (empresa === "Otros (especificar)") {
-                const custom = prompt("Nombre de la empresa:");
-                if (!custom) return;
-                empresa = custom;
-            }
-            if (tipoTela === "Otros (especificar)") {
-                const custom = prompt("Tipo de tela:");
-                if (!custom) return;
-                tipoTela = custom;
-            }
-            
             pendingSaveData = { fecha, empresa, cm, tipoPapel, ubicacion, tipoTela };
             
             // Mostrar preview
@@ -691,7 +680,7 @@
                 document.getElementById("cmUsados").value = "";
                 document.getElementById("tipoPapel").value = "Papel 180cm";
                 document.getElementById("empresaSelect").value = "Lion Sport";
-                document.getElementById("ubicacionImpresion").value = "Frontal (Pecho)";
+                document.getElementById("ubicacionImpresion").value = "Frontal";
                 document.getElementById("tipoTela").value = "Algodón 100%";
                 pendingSaveData = null;
                 
@@ -818,7 +807,7 @@
             document.getElementById("cmUsados").value = "";
             document.getElementById("tipoPapel").value = "Papel 180cm";
             document.getElementById("empresaSelect").value = "Lion Sport";
-            document.getElementById("ubicacionImpresion").value = "Frontal (Pecho)";
+            document.getElementById("ubicacionImpresion").value = "Frontal";
             document.getElementById("tipoTela").value = "Algodón 100%";
             mostrarMensaje("Campos restablecidos", "#6b7280");
         }
